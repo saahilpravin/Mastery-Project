@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class StudySet {
@@ -69,9 +70,11 @@ public class StudySet {
     }
 
     public void display(){
-        System.out.println("\nSet: " + getName());
-        for(int i=0; i < termCount; i++){
-            System.out.println((i+1) + ": " + terms.get(i).toString());
+        System.out.println("\nSet: " + getName()+"\n");
+        int i = 1;
+        for(Map.Entry<String, Term> entry : terms.entrySet()){
+            System.out.println((i) + ": " + entry.getValue().toString());
+            i++;
         }
     }
 }
