@@ -10,9 +10,8 @@ public class main{
 
         System.out.println("Welcome! Would you like to create your own Study Set? Y/N ");
         
-        if(scan.next().equals("Y")){
+        if(scan.nextLine().equals("Y")){
             System.out.println("StudySet Name: ");
-            scan.nextLine();
             curr = new StudySet(scan.nextLine(), true);
             preDefs.add(curr);
             curr.display();
@@ -28,7 +27,6 @@ public class main{
             curr = preDefs.get(i-1);
             curr.display();
         }
-
         while(true){
             System.out.println("What would you like to do? Study/Edit/New/Exit ");
             String action = scan.next();

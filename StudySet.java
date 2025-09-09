@@ -38,7 +38,6 @@ public class StudySet {
             }
 
         }
-        scanSS.close();
     }
 
     public StudySet(String n){
