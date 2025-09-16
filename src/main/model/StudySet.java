@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package src.main.model;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;

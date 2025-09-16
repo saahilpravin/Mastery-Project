@@ -1,5 +1,9 @@
+package src.main.controller;
+
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import src.main.model.StudySet;
 
 public class main{
     public static ArrayList<StudySet> preDefs = new ArrayList<>();

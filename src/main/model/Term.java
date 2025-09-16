@@ -1,3 +1,4 @@
+package src.main.model;
 public class Term {
     private String name;
     private String answer;

@@ -1,0 +1,155 @@
+#BYOSS{
+    display:flex;
+    justify-content:right;
+    align-items:right;
+}
+#PREBTN{
+    display:flex;
+    justify-content:right;
+    align-items:right;
+}
+
+#button1HeaderContainer{
+    position:absolute;
+    bottom:20%;
+    left:15%;
+    z-index:1;
+}
+
+#buttonContainer1:hover{
+    height: 325px;
+    width: 550px;  
+}
+
+#buttonContainer2:hover{
+    height: 325px;
+    width: 550px;  
+}
+
+#button2HeaderContainer{
+    position:absolute;
+    bottom:55%;
+    right:24.5%;
+    z-index:1;
+}
+
+#buttonContainer1{
+    position:absolute;
+    bottom:20%;
+    left:15%;
+    border:white 20px 20px 20px;
+    border-radius: 20%;
+    height: 300px;
+    width: 500px;  
+    background:#0E1033;  
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#buttonContainer2{
+    position:absolute;
+    bottom:20%;
+    right:15%;
+    border:white 20px 20px 20px;
+    border-radius: 20%;
+    height: 300px;
+    width: 500px;  
+    background:#0E1033;  
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.text-border {
+    text-align: center;
+    padding: 150px 20px;
+    font-size: 72px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000,
+        -3px 0px 0 #000,
+        3px 0px 0 #000,
+        0px -3px 0 #000,
+        0px 3px 0 #000;
+}
+
+body{
+    background: #000540;
+    opacity: 90%;
+    //background: linear-gradient(90deg,rgba(189, 189, 189, 1) 0%, rgba(55, 114, 196, 1) 51%, rgba(189, 189, 189, 1) 100%);
+    color:aliceblue;
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+}
+
+button{
+    dislay:block;
+    margin:0 auto;
+    background-color:#000540;
+    border: grey 10px 10px;
+    border-radius: 20%;
+    height: 50px;
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+    color:aliceblue;
+}
+
+h1{
+    margin-bottom: -20px;
+    padding: 0;
+    font-size:3em;
+}
+
+h4{
+    font-weight:100;
+}
+
+#headerContainer{
+    position:absolute;
+    left:10%;
+    
+}
+
+#titleSS{
+    position:absolute;
+    left:12%;
+    top:20%;
+    font-size:2em;
+}
+
+#titleArea{
+    background:#0E1033;
+    opacity:90%;
+    color:aliceblue;
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+    height:20px;
+    width:200px;
+    margin-top:10px;
+}
+
+textarea{
+    border: 5px 5px 5px white;
+    border-radius:5%;
+    resize:none;
+}
+
+a{
+    text-decorations:none;
+}
+
+nav{
+    position:absolute;
+    top:13%;
+    left:12%;
+    text-decorations:none;
+}
+
+hr{
+    position:absolute;
+    width:80%;
+    top:15%;
+    left:10%;
+}
