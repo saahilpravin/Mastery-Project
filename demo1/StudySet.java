@@ -13,7 +13,7 @@ public class StudySet {
      * Constructor for StudySet that prompts
      * User for terms/definitions until User is
      * content
-     * @param: StudySet Name
+     * @param: StudySet Name, boolean to determine user presences
      * @return: None
      */
     public StudySet(String n, boolean user){
@@ -53,6 +53,7 @@ public class StudySet {
     }
 
     public Term removeTerm(String n){
+        termCount--;
         return terms.remove(n);
     }
 
@@ -66,6 +67,10 @@ public class StudySet {
 
     public String getName(){
         return this.ssName;
+    }
+
+    public HashMap<String, Term> getTerms(){
+        return this.terms;
     }
 
     public void display(){

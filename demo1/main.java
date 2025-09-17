@@ -1,9 +1,11 @@
 package src.main.controller;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
 
 import src.main.model.StudySet;
+import src.main.model.Term;
 
 public class main{
     public static ArrayList<StudySet> preDefs = new ArrayList<>();
@@ -55,7 +57,7 @@ public class main{
                 }
                 curr.display();
             }else if(action.equals("Study")){
-                System.out.println("In Progress");
+                study(curr);
             }else if(action.equals("Exit")){
                 break;
             }else if(action.equals("New")){
@@ -94,11 +96,59 @@ public class main{
         preDefs.add(DM);
         DM.addTerm("Set", "A well-defined collection of distinct objects");
         DM.addTerm("Truth Table", "A mathematical table used to show the truth values of a logical expression");
-        DM.addTerm("Functions", "A rule that assigns to every element of A exactly one element of B");
+        DM.addTerm("Function", "A rule that assigns to every element of A exactly one element of B");
         StudySet LA = new StudySet("Linear Algebra");
         preDefs.add(LA);
         LA.addTerm("Vector", "A mathematical object that can be abstractly defined as an element of a vector space");
         LA.addTerm("Orthogonality", "Describes vectors that are perpendicular to each other, analogous to a 90-degree angle in geometry");
         
+    }
+
+
+    /*
+     * Prompts a Q/A algorithm for the user using terms from the
+     * currently selected StudySet. Every correct answer will remove
+     * the term from the StudySet in case user wants to redo set
+     * 
+     * @param: StudySet ss
+     * @return: none
+     */
+    private static void study(StudySet ss){
+        StudySet toMaster = ss;
+        ArrayList<String> mastered = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
+        while(true){
+            toMaster.display();
+            for(Map.Entry<String, Term> e: toMaster.getTerms().entrySet()){
+                System.out.println(e.getValue().getAnswer() + "\nEnter Term:");
+                String a = scan.nextLine();
+
+                System.out.println("Correct Term: " + e.getKey());
+                if(!a.equals(e.getKey())){
+                    System.out.println("Override Answer? Y/N ");
+                    String override = scan.nextLine();
+                    if(override.equals("Y")){
+                        mastered.add(e.getKey());
+                    }
+                }else{
+                    mastered.add(e.getKey());
+                }
+            }
+
+            for(String key : mastered){
+                toMaster.removeTerm(key);
+            }
+            
+            if(toMaster.getTermCount() >= 0){
+                System.out.println("Master Missed Terms? Y/N");
+                String repeat = scan.nextLine();
+                if(!repeat.equals("Y")){
+                    break;
+                }   
+            }else{
+                break;
+            }
+            
+        }
     }
 }
